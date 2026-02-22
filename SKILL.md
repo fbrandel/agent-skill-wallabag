@@ -29,26 +29,6 @@ export WALLABAG_USERNAME="..."
 export WALLABAG_PASSWORD="..."
 ```
 
-OpenClaw config example (`openclaw.json`):
-
-```json
-{
-  "skills": {
-    "entries": {
-      "wallabag": {
-        "path": "/absolute/path/to/skills/wallabag",
-        "env": {
-          "WALLABAG_BASE_URL": "https://wallabag.example.com",
-          "WALLABAG_CLIENT_ID": "...",
-          "WALLABAG_CLIENT_SECRET": "...",
-          "WALLABAG_USERNAME": "...",
-          "WALLABAG_PASSWORD": "..."
-        }
-      }
-    }
-  }
-}
-```
 
 ## Command Interface
 
