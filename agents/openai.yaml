@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wallabag"
+  short_description: "Control Wallabag bookmarks via API"
+  default_prompt: "Use $wallabag to authenticate and manage my Wallabag bookmarks with tags and filters."
