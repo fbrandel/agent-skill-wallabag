@@ -13,9 +13,8 @@ It supports OAuth authentication and common bookmark operations:
 
 ## Requirements
 
-- `bash`
-- `curl`
-- optional: `jq` (recommended for tag merge/remove helpers)
+- required: `bash`, `curl`
+- required for tag operations (`tag add`, `tag remove`): `jq`
 
 ## Environment Variables
 
@@ -47,7 +46,7 @@ scripts/wallabag.sh <subcommand> [options]
 
 Subcommands:
 
-- `auth`
+- `auth [--show-token]`
 - `list [--search <text>] [--tag <name>] [--archive 0|1] [--starred 0|1] [--page <n>] [--per-page <n>]`
 - `get --id <entry_id>`
 - `create --url <url> [--title <title>] [--tags "tag1,tag2"]`
@@ -59,7 +58,7 @@ Subcommands:
 ## Quick Example
 
 ```bash
-# verify credentials
+# verify credentials (safe output, token not printed)
 ./scripts/wallabag.sh auth
 
 # create bookmark
@@ -73,7 +72,9 @@ Subcommands:
 
 - Do not commit credentials.
 - Keep secrets in environment variables.
+- OAuth password grant requires full account credentials; use a dedicated low-privilege account where possible.
 - Tokens are held in-process only and are not persisted to disk.
+- `auth --show-token` prints token JSON to stdout; use it only in secure, non-logged sessions.
 
 ## References
 

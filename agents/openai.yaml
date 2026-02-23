@@ -1,4 +1,4 @@
 interface:
   display_name: "Wallabag"
-  short_description: "Control Wallabag bookmarks via API"
-  default_prompt: "Use $wallabag to authenticate and manage my Wallabag bookmarks with tags and filters."
+  short_description: "Wallabag CRUD via OAuth env credentials"
+  default_prompt: "Use $wallabag to manage Wallabag bookmarks; required WALLABAG_* env vars must be set first."
